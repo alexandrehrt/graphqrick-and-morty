@@ -1,0 +1,78 @@
+.dashboardContainer {
+  height: 80vh;
+  margin: 2rem;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    'characters episodes'
+    'characters locations';
+}
+
+.dashboardContainer span {
+  font-size: 4rem;
+  padding: 3rem;
+}
+
+.card {
+  border-radius: 8px;
+  color: #05ff46;
+  font-weight: 700;
+  font-size: 4rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s;
+}
+
+.card span {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover span {
+  border: 3px solid;
+}
+
+#characters {
+  grid-area: characters;
+
+  background: url('../../../public/characters.jpg') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#episodes {
+  grid-area: episodes;
+
+  background: url('../../../public/episodes.jpg') center no-repeat;
+  background-size: 100% 100%;
+}
+
+#locations {
+  grid-area: locations;
+
+  background: url('../../../public/location.jpg') center no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    display: block;
+  }
+
+  #characters,
+  #episodes,
+  #locations {
+    height: 25vh;
+    margin-bottom: 2rem;
+  }
+}

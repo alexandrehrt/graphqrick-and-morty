@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+  padding: 0.8rem 1.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeIcon {
+  height: 6.3rem;
+  width: 6.3rem;
+  border: 8px solid white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border-color 0.2s;
+}
+
+.homeIcon img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.homeIcon:hover {
+  border-color: #59ce08;
+}
+
+.githubIcon {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.githubIcon img {
+  height: 4rem;
+}
+
+.githubIcon:hover {
+  background-color: white;
+}
