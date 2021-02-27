@@ -1,5 +1,10 @@
+import Navbar from '../components/Navbar';
+
 export default function Locations(){
   return (
-    <h1>locations</h1>
+    <div>
+      <Navbar />
+      <h1>Locations</h1>
+    </div>
   )
 }

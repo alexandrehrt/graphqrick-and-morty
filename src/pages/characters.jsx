@@ -1,5 +1,10 @@
-export default function Characters(){
+import Navbar from '../components/Navbar';
+
+export default function Characters() {
   return (
-    <h1>characters</h1>
+    <div>
+      <Navbar />
+      <h1>characters</h1>
+    </div>
   )
 }
