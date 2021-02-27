@@ -1,0 +1,70 @@
+.charactersContainer {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.charactersContainer input {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  outline: none;
+  transition: all 0.2s ease-in;
+}
+
+.charactersContainer input:focus {
+  border-bottom: 1px solid rgb(0, 0, 255);
+}
+
+.charactersCardContainer {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20rem, 1fr));
+  gap: 1rem;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.charactersCard {
+  margin: 0.5rem;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background: rgb(4, 196, 61);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.2s;
+}
+
+.charactersCard:hover {
+  transform: translateY(-7px);
+}
+
+.charactersCard img {
+  height: 80%;
+  width: 90%;
+  border-radius: 8px;
+}
+
+.charactersCard #characterName {
+  color: white;
+  font-size: 3.2rem;
+}
+
+.charactersCard #episodes {
+  color: white;
+  font-size: 2rem;
+}

@@ -23,6 +23,5 @@ button {
 }
 
 body {
-  height: 100vh;
-  background-image: linear-gradient(#05ff46, #59ce08);
+  background: #05ff46;
 }
