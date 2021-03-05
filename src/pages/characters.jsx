@@ -22,7 +22,10 @@ export default function Characters() {
 
         <div className={styles.charactersCardContainer}>
           { data.characters.results.map(character => (
-            <Link href='#'>
+            <Link href={{
+              pathname: '/character',
+              query: { id: character.id }
+            }}>
               <a key={character.id} className={styles.charactersCard}>
                 <img src={character.image}/>
                 <span id={styles.characterName}>{character.name}</span>

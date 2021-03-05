@@ -1,0 +1,26 @@
+.episodesList {
+  margin: 2rem;
+}
+
+.episodeItem {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 1.6rem;
+  background-color: #04c43d;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.2s;
+}
+
+.episodeItem:hover {
+  transform: translateY(-5px);
+}
+
+.episodeItem #episodeName {
+  font-size: 2rem;
+  font-weight: 700;
+}

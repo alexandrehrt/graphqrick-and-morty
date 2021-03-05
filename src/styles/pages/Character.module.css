@@ -1,0 +1,84 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.character {
+  height: 80%;
+  width: 45rem;
+  color: white;
+  padding: 1.2rem;
+  margin: 0 5rem;
+  background-color: rgb(4, 196, 61);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgb(99, 95, 95);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character img {
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.character h1 {
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info div {
+  text-align: center;
+}
+
+.info p {
+  margin-bottom: 1.2rem;
+}
+
+.info span {
+  margin-top: 1.2rem;
+  margin-left: 0.5rem;
+  background-color: orange;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.characterLocation {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.characterLocation div {
+  text-align: center;
+}
+
+.characterLocation p {
+  margin-bottom: 1.2rem;
+}
+
+.characterLocation div span {
+  color: blueviolet;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}

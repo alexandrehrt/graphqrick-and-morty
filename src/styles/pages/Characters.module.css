@@ -31,8 +31,6 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(20rem, 1fr));
   gap: 1rem;
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
 .charactersCard {

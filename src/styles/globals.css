@@ -25,3 +25,7 @@ button {
 body {
   background: #05ff46;
 }
+
+ul {
+  list-style: none;
+}

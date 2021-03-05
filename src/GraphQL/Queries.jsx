@@ -25,6 +25,37 @@ query loadCharacters{
 }
 `;
 
+export const LOAD_CHARACTER = gql`
+  query loadCharacter($id: ID!) {
+    character(id: $id) {
+      name
+      status
+      species
+      gender
+      origin {
+        name
+      }
+      location {
+        name
+      }
+      image
+    }
+  }
+`;
+
+export const LOAD_EPISODES = gql`
+  query loadEpisodes{
+    episodes {
+      results {
+        id
+        name
+        air_date
+        episode
+      }
+    }
+  }
+`;
+
 export const LOAD_LOCATIONS = gql`
   query loadLocations {
     locations {
