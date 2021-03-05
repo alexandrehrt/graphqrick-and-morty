@@ -32,16 +32,6 @@ export default function Characters() {
           ))}
         </div>
       </div>
-
-      {/* <ul>
-        { data.characters.results.map(character => (
-          <li key={character.id}>
-            <p>{character.name}</p>
-            <p>{character.status}</p>
-            <img src={character.image} />
-          </li>
-        )) }
-      </ul> */}
     </div>
   )
 }
