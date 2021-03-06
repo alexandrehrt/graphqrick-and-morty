@@ -19,7 +19,7 @@ export default function Character() {
   if (!data) return <p>Not found</p>;
 
   console.log(data);
-  const { name, gender, species, status, location, image, origin } = data.character;
+  const { name, gender, species, status, location, image, origin, episode } = data.character;
 
   return (
     <div className={styles.container}>
@@ -28,7 +28,6 @@ export default function Character() {
         <img src={image}/>
         <h1>{name}</h1>
 
-        {/* <div className={styles.infoContainer}> */}
           <div className={styles.info}>
             <div>
               <p>Status: </p>
@@ -45,32 +44,22 @@ export default function Character() {
           </div>
 
           <div className={styles.characterLocation}>
-            <div>
               <p>Location:</p>
               <span>{location.name}</span>
-            </div>
-            <div>
-              <p>Origin:</p>
+              <p>Origin:</p>              
               <span>{origin.name}</span>
-            </div>
           </div>
         </div>
 
-      {/* </div> */}
-
       <div className={styles.episodes}>
+        <h1>Episodes</h1>
         <ul>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
-          <li>episodios</li>
+          { episode.map(ep => (
+            <li key={ep.id}>
+              <span>{ep.name}</span>
+              <span>{ep.air_date}</span>
+            </li>
+          )) }
         </ul>
       </div>
     </div>

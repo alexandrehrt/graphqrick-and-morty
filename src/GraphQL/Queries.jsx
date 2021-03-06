@@ -39,6 +39,11 @@ export const LOAD_CHARACTER = gql`
         name
       }
       image
+      episode {
+        id
+        name
+        air_date
+      }
     }
   }
 `;

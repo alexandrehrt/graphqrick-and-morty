@@ -9,7 +9,6 @@
 }
 
 .character {
-  height: 80%;
   width: 45rem;
   color: white;
   padding: 1.2rem;
@@ -37,7 +36,7 @@
   font-size: 2rem;
   margin-bottom: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -62,23 +61,53 @@
 
 .characterLocation {
   width: 100%;
+  margin-top: 0.5rem;
   font-size: 2rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.characterLocation div {
-  text-align: center;
 }
 
 .characterLocation p {
-  margin-bottom: 1.2rem;
+  margin: 1rem auto;
 }
 
-.characterLocation div span {
-  color: blueviolet;
+.characterLocation span {
+  background-color: rgb(162, 86, 233);
   padding: 0.3rem 0.8rem;
   border-radius: 8px;
   font-weight: 700;
-  letter-spacing: 0.2rem;
+}
+
+/* episodes list */
+
+.episodes {
+  height: 100vh;
+  margin-top: 5rem;
+  margin-right: 3rem;
+  color: #fff;
+  width: 80%;
+}
+
+.episodes h1 {
+  margin-bottom: 2rem;
+}
+
+.episodes ul li {
+  margin-bottom: 2rem;
+  background: rgb(4, 196, 61);
+  padding: 0.8rem;
+  border-radius: 8px;
+
+  transition: all 0.2s;
+}
+
+.episodes ul li:hover {
+  opacity: 0.8;
+}
+
+.episodes ul li span {
+  display: block;
+}
+
+.episodes ul li span:first-child {
+  font-size: 2rem;
+  font-weight: 700;
 }
