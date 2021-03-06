@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
+import Link from 'next/link';
 
 import styles from '../styles/pages/Character.module.css';
 
@@ -56,8 +57,12 @@ export default function Character() {
         <ul>
           { episode.map(ep => (
             <li key={ep.id}>
-              <span>{ep.name}</span>
-              <span>{ep.air_date}</span>
+              <Link href='#'>
+                <a>
+                  <span>{ep.name}</span>
+                  <span>{ep.air_date}</span>
+                </a>
+              </Link>
             </li>
           )) }
         </ul>

@@ -1,0 +1,23 @@
+.locationsList {
+  margin: 2rem;
+  color: #fff;
+}
+
+.locationsList li {
+  margin-bottom: 2rem;
+  background: rgb(4, 196, 61);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.2s;
+}
+
+.locationsList li:hover {
+  transform: translateY(-10px);
+}
+
+.locationsList li a p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+}

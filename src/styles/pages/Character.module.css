@@ -93,14 +93,15 @@
 .episodes ul li {
   margin-bottom: 2rem;
   background: rgb(4, 196, 61);
-  padding: 0.8rem;
+  padding: 1rem;
   border-radius: 8px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 
   transition: all 0.2s;
 }
 
 .episodes ul li:hover {
-  opacity: 0.8;
+  transform: translateY(-10px);
 }
 
 .episodes ul li span {
