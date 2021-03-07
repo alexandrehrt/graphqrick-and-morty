@@ -19,7 +19,6 @@ export default function Character() {
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
 
-  console.log(data);
   const { name, gender, species, status, location, image, origin, episode } = data.character;
 
   return (

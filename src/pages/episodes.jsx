@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import Cliploader from 'react-spinners/ClipLoader'
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import { LOAD_EPISODES } from '../GraphQL/Queries';
 
@@ -18,8 +19,15 @@ export default function Episodes() {
       <ul className={styles.episodesList}>
         { data.episodes.results.map(episode => (
           <li className={styles.episodeItem} key={episode.id}>
-            <span id={styles.episodeName}>{episode.name}</span>
-            <span  id={styles.episodeDetails}>{episode.episode} - {episode.air_date}</span>
+            <Link href={{
+              pathname: '/episode',
+              query: { id: episode.id }
+            }}>
+              <a>
+                <p id={styles.episodeName}>{episode.name}</p>
+                <p  id={styles.episodeDetails}>{episode.episode} - {episode.air_date}</p>
+              </a>
+            </Link>
           </li>
           ))}
       </ul>

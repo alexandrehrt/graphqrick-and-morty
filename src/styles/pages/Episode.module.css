@@ -1,0 +1,24 @@
+.container {
+  /* color: #fff; */
+}
+
+.episodeInfo {
+  margin: 2rem;
+}
+
+.episodeCharacters {
+  margin: 2rem;
+}
+
+.episodeCharacters li a {
+  position: relative;
+}
+
+.episodeCharacters li img {
+  border-radius: 50%;
+  height: 20rem;
+}
+
+.episodeCharacters li a:hover {
+  display: inline;
+}

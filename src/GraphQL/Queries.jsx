@@ -61,6 +61,22 @@ export const LOAD_EPISODES = gql`
   }
 `;
 
+export const LOAD_EPISODE = gql`
+  query loadEpisode($id: ID!) {
+      episode(id: $id) {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        image
+      }
+    }
+  }
+`;
+
 export const LOAD_LOCATIONS = gql`
   query loadLocations {
     locations {
