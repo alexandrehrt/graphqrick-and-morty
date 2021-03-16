@@ -1,18 +1,11 @@
-import { useQuery } from '@apollo/client';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import client from '../apollo-client';
+import { gql } from "@apollo/client";
 
 import styles from '../styles/pages/Locations.module.css';
 
-import { LOAD_LOCATIONS } from '../GraphQL/Queries';
-
-export default function Locations(){
-  const { loading, error, data } = useQuery(LOAD_LOCATIONS);
-
-  if (loading) return <p>Loading</p>;
-  if (error) return <p>ERROR</p>;
-  if (!data) return <p>Not found</p>;
-
+export default function Locations({ data }){
   return (
     <div>
       <Navbar />
@@ -32,4 +25,30 @@ export default function Locations(){
       </ul>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`{
+      locations {
+        results {
+          id
+          name
+          type
+          dimension
+          residents {
+            id
+            name
+          }
+        }
+      }
+    }
+  `,
+  });
+
+  return {
+    props: {
+      data
+    }
+  }
 }
