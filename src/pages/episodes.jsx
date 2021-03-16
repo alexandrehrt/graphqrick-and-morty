@@ -1,17 +1,11 @@
-import { useQuery } from '@apollo/client';
-import Cliploader from 'react-spinners/ClipLoader'
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import { LOAD_EPISODES } from '../GraphQL/Queries';
+import client from '../apollo-client';
+import { gql } from "@apollo/client";
 
 import styles from '../styles/pages/Episodes.module.css';
 
-export default function Episodes() {
-  const { loading, error, data } = useQuery(LOAD_EPISODES);
-
-  if (loading) return <Cliploader />;
-  if (error) return <p>ERROR</p>;
-  if (!data) return <p>Not found</p>;
+export default function Episodes({ data }) {
 
   return (
     <div>
@@ -34,3 +28,25 @@ export default function Episodes() {
   </div>
   );
 };
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`{
+      episodes {
+        results {
+          id
+          name
+          air_date
+          episode
+        }
+      }
+    }
+  `,
+  });
+
+  return {
+    props: {
+      data
+    }
+  }
+}

@@ -1,18 +1,18 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+// import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 import '../styles/globals.css';
 
-const client = new ApolloClient({
-  uri: 'https://rickandmortyapi.com/graphql',
-  cache: new InMemoryCache()
-});
+// const client = new ApolloClient({
+//   uri: 'https://rickandmortyapi.com/graphql',
+//   cache: new InMemoryCache()
+// });
 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ApolloProvider client={client}>
+    // <ApolloProvider client={client}>
       <Component {...pageProps} />
-    </ApolloProvider>
+    // </ApolloProvider>
   )
 }
 

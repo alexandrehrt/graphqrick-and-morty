@@ -48,5 +48,4 @@ export default function  Episode() {
       </div>
     </div>
   )
-  
 }
