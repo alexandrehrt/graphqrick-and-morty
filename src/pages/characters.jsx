@@ -1,17 +1,11 @@
-import { useQuery } from '@apollo/client';
-import Cliploader from 'react-spinners/ClipLoader'
 import Navbar from '../components/Navbar';
-import { LOAD_CHARACTERS } from '../GraphQL/Queries';
 import Link from 'next/link';
+import client from '../apollo-client';
+import { gql } from "@apollo/client";
 
 import styles from '../styles/pages/Characters.module.css';
 
-export default function Characters() {
-  const { loading, error, data } = useQuery(LOAD_CHARACTERS);
-
-  if (loading) return <Cliploader />;
-  if (error) return <p>ERROR</p>;
-  if (!data) return <p>Not found</p>;
+export default function Characters({ data }) {
 
   return (
     <div>
@@ -22,11 +16,11 @@ export default function Characters() {
 
         <div className={styles.charactersCardContainer}>
           { data.characters.results.map(character => (
-            <Link href={{
+            <Link key={character.id} href={{
               pathname: '/character',
               query: { id: character.id }
             }}>
-              <a key={character.id} className={styles.charactersCard}>
+              <a className={styles.charactersCard}>
                 <img src={character.image}/>
                 <span id={styles.characterName}>{character.name}</span>
                 <span id={styles.episodes}>Episodes: {character.episode.length}</span>
@@ -37,4 +31,38 @@ export default function Characters() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`{
+      characters {
+        results {
+          id
+          name
+          status
+          species
+          gender
+          origin {
+            id
+            name
+            dimension
+          }
+          image
+          episode {
+            id
+            name
+            air_date
+          }
+        }
+      }
+    }
+  `,
+  });
+
+  return {
+    props: {
+      data
+    }
+  }
 }
