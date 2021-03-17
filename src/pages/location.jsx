@@ -4,14 +4,14 @@ import Cliploader from 'react-spinners/ClipLoader'
 import Navbar from '../components/Navbar';
 import Link from 'next/link';
 
-import { LOAD_EPISODE } from '../GraphQL/Queries';
-import styles from '../styles/pages/Episode.module.css';
+import { LOAD_LOCATION } from '../GraphQL/Queries';
+import styles from '../styles/pages/Location.module.css';
 
 export default function  Episode() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { loading, error, data } = useQuery(LOAD_EPISODE, {
+  const { loading, error, data } = useQuery(LOAD_LOCATION, {
     variables: { id }
   });
 
@@ -19,29 +19,28 @@ export default function  Episode() {
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
 
-  const {name, air_date, episode, characters} = data.episode;
+  const { name, dimension, residents} = data.location;
 
   return (
     <div className={styles.container}>
       <Navbar />
 
-      <div className={styles.episodeInfo}>
+      <div className={styles.locationInfo}>
         <h1>{name}</h1>
-        <p>{episode}</p>
-        <p>Air date: {air_date}</p>
+        <p>{dimension}</p>
       </div>
 
-      <div className={styles.episodeCharacters}>
+      <div className={styles.locationCharacters}>
         <ul>
-          { characters.map(character => (
-            <li key={character.id}>
+          { residents.map(resident => (
+            <li key={resident.name}>
               <Link href={{
                 pathname: '/character',
-                query: { id: character.id }
+                query: { id: resident.id }
               }}>
                 <a>
-                  <img src={character.image} alt={character.name}/>
-                  <h2>{character.name}</h2>
+                  <img src={resident.image} alt={resident.name}/>
+                  <h2>{resident.name}</h2>
                 </a>
               </Link>
             </li>

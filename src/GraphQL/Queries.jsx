@@ -38,3 +38,19 @@ export const LOAD_EPISODE = gql`
     }
   }
 `;
+
+
+export const LOAD_LOCATION = gql`
+  query loadLocation($id: ID!) {
+      location(id: $id) {
+      id
+      name
+      dimension
+      residents {
+        id
+        name
+        image
+      }
+    }
+  }
+`;

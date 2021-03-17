@@ -24,10 +24,8 @@ export default function Character() {
   return (
     <div className={styles.container}>
       <div className={styles.character}>
-
         <img src={image}/>
         <h1>{name}</h1>
-
           <div className={styles.info}>
             <div>
               <p>Status: </p>
@@ -56,7 +54,10 @@ export default function Character() {
         <ul>
           { episode.map(ep => (
             <li key={ep.id}>
-              <Link href='#'>
+              <Link href={{
+                pathname: '/episode',
+                query: { id: ep.id }
+              }}>
                 <a>
                   <span>{ep.name}</span>
                   <span>{ep.air_date}</span>

@@ -2,7 +2,7 @@
   color: #fff;
 }
 
-.episodeInfo {
+.locationInfo {
   margin: 2rem;
   background-color: #04c43d;
   padding: 1rem;
@@ -12,22 +12,22 @@
   transition: all 0.2s;
 }
 
-.episodeInfo:hover {
+.locationInfo:hover {
   opacity: 0.8;
 }
 
-.episodeCharacters {
+.locationCharacters {
   margin: 2rem;
   width: 100vw;
 }
 
-.episodeCharacters ul {
+.locationCharacters ul {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
 
-.episodeCharacters ul li {
+.locationCharacters ul li {
   margin: 1rem 4rem 2rem 0;
   padding: 1rem;
   border-radius: 8px;
@@ -37,11 +37,11 @@
   transition: all 0.2s;
 }
 
-.episodeCharacters ul li:hover {
+.locationCharacters ul li:hover {
   transform: translateY(-10px);
 }
 
-.episodeCharacters li img {
+.locationCharacters li img {
   border-radius: 50%;
   height: 20rem;
 }

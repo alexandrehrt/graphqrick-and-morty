@@ -7,27 +7,14 @@
   align-items: center;
 }
 
-.homeIcon {
-  height: 6.3rem;
-  width: 6.3rem;
-  border: 8px solid white;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: border-color 0.2s;
-}
-
 .homeIcon img {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
 }
 
-.homeIcon:hover {
-  border-color: #59ce08;
+.title {
+  color: #0c411c;
 }
 
 .githubIcon {

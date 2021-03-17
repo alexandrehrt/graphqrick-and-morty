@@ -12,7 +12,10 @@ export default function Locations({ data }){
       <ul className={styles.locationsList}>
         { data.locations.results.map(location => (
           <li key={location.id}>
-            <Link href='#'>
+            <Link href={{
+              pathname: '/location',
+              query: { id: location.id }
+            }}>
               <a>
                 <p>Name: {location.name}</p>
                 <p>Type: {location.type}</p>
