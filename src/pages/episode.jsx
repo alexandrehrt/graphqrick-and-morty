@@ -28,8 +28,7 @@ export default function  Episode() {
       <div className={styles.episodeInfo}>
         <h1>{name}</h1>
         <p>{episode}</p>
-        <p>Air date</p>
-        <p>{air_date}</p>
+        <p>Air date: {air_date}</p>
       </div>
 
       <div className={styles.episodeCharacters}>
@@ -39,7 +38,7 @@ export default function  Episode() {
               <Link href='#'>
                 <a>
                   <img src={character.image} alt={character.name}/>
-                  <p className={styles.caption}>{character.name}</p>
+                  <h2 className={styles.caption}>{character.name}</h2>
                 </a>
               </Link>
             </li>
