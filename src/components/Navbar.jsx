@@ -7,17 +7,15 @@ export default function Navbar() {
       <Link href={{ pathname: '/'}}>
         <a className={styles.homeIcon}>
           <img src="logo.png" alt="Home"/>
+          Rick and Morty GraphQL
         </a>
       </Link>
-
-      <h1 className={styles.title}>Rick and Morty GraphQL</h1>
 
       <Link href='https://github.com/alexandrehrt/graphqrick-and-morty'>
         <a className={styles.githubIcon}>
           <img src="github-icon.png" alt="Github"/>
         </a>
       </Link>
-
     </div>
   );
 };
