@@ -8,6 +8,22 @@
   align-items: center;
 }
 
+.charactersContainer input {
+  width: 30%;
+  font-size: 1.8rem;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid rgb(70, 59, 59);
+  background: transparent;
+  outline: none;
+
+  transition: all 0.2s;
+}
+
+.charactersContainer input:focus {
+  border-bottom: 1px solid blue;
+}
+
 .charactersCardContainer {
   margin: 2.4rem;
   width: 100vw;

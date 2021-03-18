@@ -4,16 +4,29 @@ import client from '../apollo-client';
 import { gql } from "@apollo/client";
 
 import styles from '../styles/pages/Characters.module.css';
+import { useState } from 'react';
 
 export default function Characters({ data }) {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
       <Navbar />
-
       <div className={styles.charactersContainer}>
+        <input 
+          type="text" 
+          placeholder='Search character' 
+          onChange={(event) => setSearchTerm(event.target.value)} 
+        />
         <div className={styles.charactersCardContainer}>
           <ul>
-            { data.characters.results.map(character => (
+            { data.characters.results.filter(character => {
+              if (searchTerm === '') {
+                return character;
+              } else if (character.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return character;
+              }
+            }).map(character => (
               <li key={character.id}>
                 <Link href={{
                   pathname: '/character',
