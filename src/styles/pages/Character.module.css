@@ -10,7 +10,7 @@
 
 .character {
   width: 45rem;
-  color: white;
+  color: #fff;
   padding: 1.2rem;
   margin: 0 5rem;
   background-color: rgb(4, 196, 61);
@@ -22,7 +22,11 @@
   align-items: center;
 }
 
-.character img {
+.character .imageContainer {
+  text-align: center;
+}
+
+.character .imageContainer img {
   border-radius: 50%;
   margin-bottom: 2rem;
 }
@@ -111,4 +115,65 @@
 .episodes ul li span:first-child {
   font-size: 2rem;
   font-weight: 700;
+}
+
+/* MEDIAS */
+
+@media (max-width: 915px) {
+  .container {
+    margin-top: 2rem;
+    font-size: 80%;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .character {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .info {
+    font-size: 1.6rem;
+  }
+
+  .characterLocation {
+    font-size: 1.6rem;
+  }
+
+  .imageContainer {
+    margin-right: 2rem;
+  }
+
+  .imageContainer img {
+    height: 80%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 675px) {
+  .character {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .imageContainer {
+    margin-bottom: 2rem;
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .imageContainer {
+    margin-bottom: 3rem;
+  }
+
+  .info {
+    font-size: 1.4rem;
+  }
+
+  .characterLocation {
+    font-size: 1.4rem;
+  }
 }

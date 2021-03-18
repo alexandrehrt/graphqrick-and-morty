@@ -6,17 +6,14 @@ import { gql } from "@apollo/client";
 import styles from '../styles/pages/Characters.module.css';
 
 export default function Characters({ data }) {
-
   return (
     <div>
       <Navbar />
 
       <div className={styles.charactersContainer}>
-        <input type='text' placeholder='Search character' />
-
         <div className={styles.charactersCardContainer}>
-          { data.characters.results.map(character => (
-            <ul>
+          <ul>
+            { data.characters.results.map(character => (
               <li key={character.id}>
                 <Link href={{
                   pathname: '/character',
@@ -29,8 +26,8 @@ export default function Characters({ data }) {
                   </a>
                 </Link>
               </li>
-            </ul>
-          ))}
+            ))}
+          </ul>
         </div>
       </div>
     </div>

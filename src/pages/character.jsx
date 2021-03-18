@@ -15,7 +15,8 @@ export default function Character() {
     variables: { id }
   });
 
-  if (loading) return <p>Loading</p>;
+  // TO DO: arrumar esse trecho
+  if (loading) return <p className={styles.loading}>Loading</p>;
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
 
@@ -24,8 +25,14 @@ export default function Character() {
   return (
     <div className={styles.container}>
       <div className={styles.character}>
-        <img src={image}/>
-        <h1>{name}</h1>
+        {/* PROFILE PICTURE */}
+        <div className={styles.imageContainer}>
+          <img src={image}/>
+          <h1>{name}</h1>
+        </div>
+
+        <div>
+          {/* STATUS */}
           <div className={styles.info}>
             <div>
               <p>Status: </p>
@@ -40,15 +47,17 @@ export default function Character() {
               <span>{gender}</span>
             </div>
           </div>
-
+          {/* LOCATION */}
           <div className={styles.characterLocation}>
-              <p>Location:</p>
-              <span>{location.name}</span>
-              <p>Origin:</p>              
-              <span>{origin.name}</span>
+            <p>Location:</p>
+            <span>{location.name}</span>
+            <p>Origin:</p>              
+            <span>{origin.name}</span>
           </div>
         </div>
+      </div>
 
+      {/* EPISODES LIST */}
       <div className={styles.episodes}>
         <h1>Episodes</h1>
         <ul>
@@ -70,3 +79,4 @@ export default function Character() {
     </div>
   )
 }
+
