@@ -3,7 +3,7 @@
 [Link to the website](https://rick-and-mortyql.vercel.app/)
 
 ## Description
- Project made in order to study about Next.js and GraphQl.
+ Project made in order to study Next.js and GraphQl.
  
 ## Instructions
 
