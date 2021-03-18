@@ -16,16 +16,20 @@ export default function Characters({ data }) {
 
         <div className={styles.charactersCardContainer}>
           { data.characters.results.map(character => (
-            <Link key={character.id} href={{
-              pathname: '/character',
-              query: { id: character.id }
-            }}>
-              <a className={styles.charactersCard}>
-                <img src={character.image}/>
-                <span id={styles.characterName}>{character.name}</span>
-                <span id={styles.episodes}>Episodes: {character.episode.length}</span>
-              </a>
-            </Link>
+            <ul>
+              <li key={character.id}>
+                <Link href={{
+                  pathname: '/character',
+                  query: { id: character.id }
+                }}>
+                  <a className={styles.charactersCard}>
+                    <img src={character.image}/>
+                    <p id={styles.characterName}>{character.name}</p>
+                    <p id={styles.episodes}>Episodes: {character.episode.length}</p>
+                  </a>
+                </Link>
+              </li>
+            </ul>
           ))}
         </div>
       </div>

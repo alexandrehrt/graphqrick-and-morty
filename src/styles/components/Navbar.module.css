@@ -35,3 +35,10 @@
 .githubIcon:hover {
   background-color: white;
 }
+
+@media (max-width: 510px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

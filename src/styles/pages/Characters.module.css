@@ -27,10 +27,13 @@
 }
 
 .charactersCardContainer {
-  margin-top: 2.4rem;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(20rem, 1fr));
-  gap: 1rem;
+  margin: 2.4rem;
+  width: 100vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .charactersCard {
@@ -60,10 +63,10 @@
 
 .charactersCard #characterName {
   color: white;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
 }
 
 .charactersCard #episodes {
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
